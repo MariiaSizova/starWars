@@ -1,0 +1,56 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navLogo {
+  width: 20px;
+  height: 20px;
+}
+
+.closedDropdown {
+  width: 20px;
+  height: 20px;
+  padding-left: 15px;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 232px;
+}
+
+nav {
+  width: 232px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  width: 190px;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-left: 24px;
+}
+
+nav ul li:last-child {
+  padding-top: 8px;
+  border-top: 1px solid #ebe7e740;
+}
+
+nav a {
+  text-decoration: none;
+  width: 120px;
+  color: #fbfbfb;
+  margin-left: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

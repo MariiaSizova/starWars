@@ -1,0 +1,25 @@
+@import url("../../App.module.css");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.sidebar {
+  width: 232px;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0px;
+  gap: 24px;
+  background: var(--bg-dark-color);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+}
+
+.swLogo {
+  width: 153px;
+  height: 92px;
+}
