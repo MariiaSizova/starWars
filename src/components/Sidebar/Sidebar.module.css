@@ -1,9 +1,5 @@
 @import url("../../App.module.css");
 
-* {
-  font-family: "Open Sans", sans-serif;
-}
-
 .sidebar {
   width: 232px;
   height: 100vh;

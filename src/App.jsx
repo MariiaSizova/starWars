@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Resources from "./components/Resources/Resources";
 import Sidebar from "./components/Sidebar/Sidebar";
-/* import Search from "./components/Search/Search"; */
+import Search from "./components/Search/Search";
+import Button from "./components/Button/Button";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/settings" />
         </Routes>
       </BrowserRouter>
+      <Search />
+      <Button />
     </div>
   );
 };

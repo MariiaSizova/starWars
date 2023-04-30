@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Nav.module.css";
 import logoDash from "../../images/dash.svg";
@@ -8,6 +8,11 @@ import logoSettings from "../../images/1.svg";
 import logoClosed from "../../images/arrow2.svg";
 
 const Nav = () => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
   return (
     <div className={classes.navBar}>
       <nav>
@@ -28,19 +33,44 @@ const Nav = () => {
             />
             <NavLink to="/movies">Movies</NavLink>
           </li>
-          <li>
+          <li className={classes.dropdownParent}>
             <img
               src={logoPeople}
               alt="Logo for resources"
               className={classes.navLogo}
             />
-            <NavLink to="/resources">Resources</NavLink>
+            <NavLink to="/resources" onClick={toggleDropdown}>
+              Resources
+            </NavLink>
             <img
               src={logoClosed}
-              className={classes.closedDropdown}
+              className={`${classes.closedDropdown} ${
+                dropdownVisible ? classes.openDropdown : ""
+              }`}
               alt="Dropdown menu logo"
+              onClick={toggleDropdown}
             />
           </li>
+          <div
+            className={`${classes.dropdownContainer} ${
+              dropdownVisible ? classes.show : ""
+            }`}
+          >
+            <nav>
+              <ul>
+                <li>
+                  <NavLink to="/people">People</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/starships">Starships</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/planets">Planets</NavLink>
+                </li>
+              </ul>
+            </nav>
+            <hr className={classes.line} />
+          </div>
           <li>
             <img
               src={logoSettings}

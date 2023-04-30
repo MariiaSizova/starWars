@@ -1,0 +1,14 @@
+@import url("../../App.module.css");
+
+.search {
+  font-family: inherit;
+  width: 400px;
+  height: 40px;
+  border-radius: var(--br-radius);
+  padding: 8px 10px 8px 16px;
+  border: 1px solid #e2dce2;
+  background-image: url("../../images/search.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}

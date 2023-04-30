@@ -1,16 +1,8 @@
-* {
-  font-family: "Open Sans", sans-serif;
-}
+@import url("../../App.module.css");
 
 .navLogo {
   width: 20px;
   height: 20px;
-}
-
-.closedDropdown {
-  width: 20px;
-  height: 20px;
-  padding-left: 15px;
 }
 
 .navBar {
@@ -31,17 +23,35 @@ ul {
   padding: 0;
 }
 
-nav ul li {
+.navItem {
   display: flex;
-  width: 190px;
   align-items: center;
-  padding-bottom: 40px;
-  margin-left: 24px;
+  justify-content: center;
+  flex-direction: row;
 }
 
-nav ul li:last-child {
-  padding-top: 8px;
-  border-top: 1px solid #ebe7e740;
+nav ul li {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  padding: 20px 0 20px 24px;
+}
+
+nav ul li:hover {
+  background-color: var(--higlight-color);
+}
+
+nav ul li:hover a {
+  color: var(--bg-dark-color);
+}
+
+.line {
+  border: 1px solid #ebe7e740;
+  margin: 0 24px;
+}
+
+.border:last-child {
+  padding-left: 0;
 }
 
 nav a {
@@ -53,4 +63,31 @@ nav a {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+}
+
+/* Dropdown */
+.closedDropdown {
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+  transform: rotate(-90deg);
+}
+
+.openDropdown {
+  padding-top: 0px;
+  padding-left: 15px;
+  transform: rotate(0deg);
+}
+
+.hiddenDropdown {
+  color: var(--bg-dark-color);
+}
+
+.dropdownContainer {
+  display: none;
+  width: 232px;
+}
+
+.show {
+  display: block;
 }

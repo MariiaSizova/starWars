@@ -1,0 +1,18 @@
+@import url("../../App.module.css");
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 40px;
+  padding: 14px 18px 14px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(28, 30, 34, 0.5);
+  border-radius: var(--br-radius);
+  background-image: url("../../images/add.svg");
+  background-size: 20px 29px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
