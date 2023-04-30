@@ -1,0 +1,42 @@
+export const data = [
+  {
+    id: 1,
+    name: "Luke Skywalker",
+    height: 172,
+    weight: 77,
+    starship: "X-wing, Imperial shuttle",
+    created: "09.12.2014 15:50",
+  },
+  {
+    id: 2,
+    name: "Obi-Wan Kenobi",
+    height: 182,
+    weight: 81,
+    starship: "Jedi starfighter, Trade Federation cruiser",
+    created: "10.12.2014 17:20",
+  },
+  {
+    id: 3,
+    name: "Yoda",
+    height: 66,
+    weight: 17,
+    starship: "",
+    created: "10.12.2014 18:16",
+  },
+  {
+    id: 4,
+    name: "Padme Amidala",
+    height: 165,
+    weight: 45,
+    starship: "H-type Nubian yacht",
+    created: "10.12.2014 18:49",
+  },
+  {
+    id: 5,
+    name: "Leia Organa",
+    height: 155,
+    weight: 51,
+    starship: "Y-wing, X-wing, Imperial shuttle",
+    created: "15.12.2014 14:26",
+  },
+];

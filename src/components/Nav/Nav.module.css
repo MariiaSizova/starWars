@@ -13,35 +13,28 @@
   width: 232px;
 }
 
-nav {
+.nav {
   width: 232px;
 }
 
-ul {
+.ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.navItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-nav ul li {
+.li {
   display: flex;
   height: 20px;
   align-items: center;
   padding: 20px 0 20px 24px;
 }
 
-nav ul li:hover {
+.li:hover {
   background-color: var(--higlight-color);
 }
 
-nav ul li:hover a {
+.li:hover a {
   color: var(--bg-dark-color);
 }
 

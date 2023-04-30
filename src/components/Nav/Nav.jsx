@@ -15,9 +15,9 @@ const Nav = () => {
   };
   return (
     <div className={classes.navBar}>
-      <nav>
-        <ul>
-          <li>
+      <nav className={classes.nav}>
+        <ul className={classes.ul}>
+          <li className={classes.li}>
             <img
               src={logoDash}
               alt="Logo for dashboard"
@@ -25,7 +25,7 @@ const Nav = () => {
             />
             <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
-          <li>
+          <li className={classes.li}>
             <img
               src={logoMedia}
               alt="Logo for movies"
@@ -33,7 +33,7 @@ const Nav = () => {
             />
             <NavLink to="/movies">Movies</NavLink>
           </li>
-          <li className={classes.dropdownParent}>
+          <li className={`${classes.dropdownParent} ${classes.li}`}>
             <img
               src={logoPeople}
               alt="Logo for resources"
@@ -56,22 +56,22 @@ const Nav = () => {
               dropdownVisible ? classes.show : ""
             }`}
           >
-            <nav>
-              <ul>
-                <li>
+            <nav className={classes.nav}>
+              <ul className={classes.ul}>
+                <li className={classes.li}>
                   <NavLink to="/people">People</NavLink>
                 </li>
-                <li>
+                <li className={classes.li}>
                   <NavLink to="/starships">Starships</NavLink>
                 </li>
-                <li>
+                <li className={classes.li}>
                   <NavLink to="/planets">Planets</NavLink>
                 </li>
               </ul>
             </nav>
             <hr className={classes.line} />
           </div>
-          <li>
+          <li className={classes.li}>
             <img
               src={logoSettings}
               alt="Logo for settings"
