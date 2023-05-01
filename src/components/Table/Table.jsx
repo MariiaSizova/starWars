@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Table.module.css";
 import forwardLogo from "../../images/chevron_right_black_24dp.svg";
 import backLogo from "../../images/chevron_left_black_24dp.svg";
 import firstPageLogo from "../../images/first_page_black_24dp.svg";
 import lastPageLogo from "../../images/last_page_black_24dp.svg";
-import { data } from "../../services/data.js";
 
-const Table = () => {
+const Table = ({ data }) => {
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
+  const [tableData, setTableData] = useState(data);
+  const [sortField, setSortField] = useState("");
+  const [order, setOrder] = useState("asc");
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  useEffect(() => {
+    setTableData(data);
+  }, [data]);
+
+  const totalPages = Math.ceil(tableData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentItems = data.slice(startIndex, endIndex);
+  const currentItems = tableData.slice(startIndex, endIndex);
 
   const handlePreviousPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
@@ -27,8 +33,41 @@ const Table = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
-  const handleLasPage = () => {
+  const handleLastPage = () => {
     setCurrentPage(totalPages);
+  };
+
+  const columns = [
+    { label: "Name", accessor: "name", sortable: true },
+    { label: "Height", accessor: "height", sortable: false },
+    { label: "Weight", accessor: "weight", sortable: true },
+    { label: "Starship", accessor: "starship", sortable: true },
+    { label: "Created", accessor: "created", sortable: true },
+  ];
+
+  const handleSortingChange = (accessor) => {
+    const sortOrder =
+      accessor === sortField && order === "asc" ? "desc" : "asc";
+    setSortField(accessor);
+    setOrder(sortOrder);
+    handleSorting(accessor, sortOrder);
+  };
+
+  const handleSorting = (sortField, sortOrder) => {
+    if (sortField) {
+      const sorted = [...tableData].sort((a, b) => {
+        if (a[sortField] === null && b[sortField] !== null) return 1;
+        if (a[sortField] !== null && b[sortField] === null) return -1;
+        if (a[sortField] === null && b[sortField] === null) return 0;
+        return (
+          a[sortField]
+            .toString()
+            .localeCompare(b[sortField].toString(), "en", { numeric: true }) *
+          (sortOrder === "asc" ? 1 : -1)
+        );
+      });
+      setTableData(sorted);
+    }
   };
 
   return (
@@ -37,11 +76,17 @@ const Table = () => {
         <thead>
           <tr>
             <th className={classes.columnSml}></th>
-            <th className={classes.columnFix}>Name</th>
-            <th className={classes.columnFix}>Height</th>
-            <th className={classes.columnFix}>Weight</th>
-            <th className={classes.columnFix}>Starship</th>
-            <th className={classes.columnFix}>Created</th>
+            {columns.map(({ label, accessor }) => {
+              return (
+                <th
+                  className={classes.columnFix}
+                  key={accessor}
+                  onClick={() => handleSortingChange(accessor)}
+                >
+                  {label}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
@@ -63,7 +108,7 @@ const Table = () => {
       </table>
       <div className={classes.pagination}>
         <span className={classes.numberOfRows}>
-          {startIndex + 1}-{endIndex} of {data.length}
+          {startIndex + 1}-{endIndex} of {tableData.length}
         </span>
         <button
           className={classes.btnPage}
@@ -93,7 +138,7 @@ const Table = () => {
         <button
           className={classes.btnPage}
           disabled={currentPage === totalPages}
-          onClick={handleLasPage}
+          onClick={handleLastPage}
         >
           <img className={classes.btnLogo} src={lastPageLogo} alt="Last page" />
         </button>

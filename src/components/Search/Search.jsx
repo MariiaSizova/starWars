@@ -1,7 +1,10 @@
 import React from "react";
 import classes from "./Search.module.css";
 
-const Search = () => {
+const Search = ({ handleSearch }) => {
+  const handleChange = (e) => {
+    handleSearch(e.target.value);
+  };
   return (
     <div>
       <input
@@ -10,6 +13,7 @@ const Search = () => {
         name="search"
         id="search"
         placeholder="Search..."
+        onChange={handleChange}
       />
     </div>
   );
