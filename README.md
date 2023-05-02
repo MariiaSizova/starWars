@@ -29,4 +29,9 @@ The App will start running at [http://localhost:3000](http://localhost:3000).
 ## Deployment
 
 The App is deploed on Netlify and can be found here:
-[http://localhost:3000](http://localhost:3000)
+
+[![StarWars](https://img.shields.io/badge/StarWars-ffe81f?style=for-the-badge&logo=star&logoColor=black)](https://public.bc.fi/s2300111/pokeDex/)
+
+### Link to my GitHub
+
+[![Github Badge](https://img.shields.io/badge/Github-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MariiaSizova)
