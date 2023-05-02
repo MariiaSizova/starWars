@@ -1,31 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Resources.module.css";
 import Search from "../Search/Search";
 import Table from "../Table/Table";
 import Addform from "../AddForm/Addform";
 
+import { data } from "../../services/data.js";
+
 const Resources = () => {
-  const [data, setData] = useState([]);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const getData = () => {
-    let requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch("http://localhost:4001/data", requestOptions)
-      .then((response) => response.json())
-      .then((result) => setData(result))
-      .catch((error) => console.log("error", error));
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   const [filteredData, setFilteredData] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   const handleSearch = (query) => {
     const filtered = data.filter((item) =>
       item.name.toLowerCase().includes(query.toLowerCase())
