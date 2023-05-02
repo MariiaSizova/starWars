@@ -12,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <Sidebar />
         <Routes>
-          <Route path="/" />
+          <Route path="/" element={<Resources />} />
           <Route path="/dashboard" />
           <Route path="/movies" />
           <Route path="/resources/people" element={<Resources />} />
