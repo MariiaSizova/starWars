@@ -1,7 +1,7 @@
 @import url("../../App.module.css");
 
 .sidebar {
-  width: 232px;
+  width: 14.5rem;
   height: 100vh;
   display: flex;
   justify-content: flex-start;

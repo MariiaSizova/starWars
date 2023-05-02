@@ -13,4 +13,5 @@
 body {
   font-family: "Open Sans", sans-serif;
   background: var(--bg-light-color);
+  /* font-size: 62.5%; */
 }

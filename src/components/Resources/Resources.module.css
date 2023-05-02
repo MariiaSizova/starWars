@@ -1,7 +1,7 @@
 @import url("../../App.module.css");
 .resourcesPage {
-  margin-left: 232px;
-  margin-top: 56px;
+  margin-left: 14.5rem;
+  margin-top: 3.5rem;
 }
 
 .resourcesLine {
@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 48px 48px 0 48px;
+  margin: 3rem 3rem 0 3rem;
 }
 
 .buttons {
@@ -19,10 +19,10 @@
 }
 
 .actionBtn {
-  width: 128px;
-  height: 40px;
+  width: 8rem;
+  height: 2.5rem;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   background: #ffffff;
   border: 1px solid rgba(28, 30, 34, 0.5);
   border-radius: var(--br-radius);
@@ -30,7 +30,7 @@
   background-size: 20px 29px;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 
 .resourcesTitle {
@@ -40,13 +40,13 @@
 }
 
 .addBtn {
-  width: 151px;
-  height: 40px;
+  width: 9.4rem;
+  height: 2.5rem;
   border: none;
   background: var(--higlight-color);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: var(--br-radius);
   color: rgba(28, 30, 34, 0.8);
 }
@@ -55,12 +55,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .resourceNavBar {
   display: flex;
-  margin-left: 48px;
+  margin-left: 3rem;
 }
 
 .resourceNav {
@@ -82,7 +82,7 @@
   position: relative;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .resourceLi:hover {
@@ -108,12 +108,12 @@
 }
 
 .searchBar {
-  margin-right: 48px;
+  margin-right: 3rem;
 }
 
 .table {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 48px;
+  margin: 0 3rem;
 }

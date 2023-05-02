@@ -10,11 +10,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 232px;
+  width: 14.5rem;
 }
 
 .nav {
-  width: 232px;
+  width: 14.5rem;
 }
 
 .ul {
@@ -49,12 +49,12 @@
 
 nav a {
   text-decoration: none;
-  width: 120px;
+  width: 7.5rem;
   color: #fbfbfb;
-  margin-left: 16px;
+  margin-left: 1rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
 }
 
@@ -78,7 +78,7 @@ nav a {
 
 .dropdownContainer {
   display: none;
-  width: 232px;
+  width: 14.5rem;
 }
 
 .show {
