@@ -115,7 +115,9 @@ const Table = ({ data }) => {
               <td className={classes.columnFix}>{item.name}</td>
               <td className={classes.columnFix}>{item.height}</td>
               <td className={classes.columnFix}>{item.weight}</td>
-              <td className={classes.columnFix}>{item.starship}</td>
+              <td className={classes.columnFix}>
+                <a href="/resources/starships">{item.starship}</a>
+              </td>
               <td className={classes.columnFix}>{item.created}</td>
             </tr>
           ))}

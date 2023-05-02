@@ -60,13 +60,13 @@ const Nav = () => {
             <nav className={classes.nav}>
               <ul className={classes.ul}>
                 <li className={classes.li}>
-                  <NavLink to="/people">People</NavLink>
+                  <NavLink to="/resources/people">People</NavLink>
                 </li>
                 <li className={classes.li}>
-                  <NavLink to="/starships">Starships</NavLink>
+                  <NavLink to="/resources/starships">Starships</NavLink>
                 </li>
                 <li className={classes.li}>
-                  <NavLink to="/planets">Planets</NavLink>
+                  <NavLink to="/resources/planets">Planets</NavLink>
                 </li>
               </ul>
             </nav>

@@ -12,6 +12,16 @@
   margin: 3rem 3rem 0 3rem;
 }
 
+/* a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+} */
+
 .buttons {
   display: flex;
   align-items: flex-end;
@@ -35,7 +45,7 @@
 
 .resourcesTitle {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.2rem;
   line-height: 46px;
 }
 
@@ -49,6 +59,12 @@
   font-size: 1rem;
   border-radius: var(--br-radius);
   color: rgba(28, 30, 34, 0.8);
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
 }
 
 .secondLine {
@@ -74,18 +90,23 @@
   padding: 0;
 }
 
-.resourceLi {
-  display: flex;
-  align-items: center;
+.page {
+  text-decoration: none;
   padding: 0 10px;
   cursor: pointer;
-  position: relative;
   font-style: normal;
   font-weight: 600;
   font-size: 1rem;
+  color: #1c1e22;
 }
 
-.resourceLi:hover {
+.resourceLi {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.page:hover {
   color: var(--higlight-color-dark);
 }
 

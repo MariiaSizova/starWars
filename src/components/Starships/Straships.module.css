@@ -1,0 +1,93 @@
+@import url("../../App.module.css");
+
+.starshipPage {
+  margin-left: 14.5rem;
+  margin-top: 3.5rem;
+}
+
+.headerStarship {
+  margin: 6rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnSave {
+  width: 5.2rem;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: var(--br-radius);
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btnCancel {
+  width: 6rem;
+  height: 2.5rem;
+  background: #fff;
+  border: 1px solid rgba(28, 30, 34, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-radius);
+  margin-right: 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.starshipName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.bodyStarship {
+  display: flex;
+}
+
+.starshipImage {
+  width: 35rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+}
+
+.leftSide {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.rightSide {
+  flex: 1;
+}
+
+.text {
+  margin-bottom: 2rem;
+}
+
+.starshipParams {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgba(28, 30, 34, 0.8);
+  margin: 0;
+}
+
+.params {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1c1e22;
+  margin: 0;
+}
+
+.peopleship {
+  color: #2978a0;
+  font-size: 1rem;
+}
