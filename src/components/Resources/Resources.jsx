@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Resources.module.css";
 import Search from "../Search/Search";
 import Table from "../Table/Table";
-import { data } from "../../services/data.js";
 
 const Resources = () => {
+  const [data, setData] = useState([]);
+
+  const getData = () => {
+    let requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:4001/data", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.log("error", error));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   const [filteredData, setFilteredData] = useState([]);
   const handleSearch = (query) => {
     const filtered = data.filter((item) =>

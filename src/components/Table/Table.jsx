@@ -4,13 +4,14 @@ import forwardLogo from "../../images/chevron_right_black_24dp.svg";
 import backLogo from "../../images/chevron_left_black_24dp.svg";
 import firstPageLogo from "../../images/first_page_black_24dp.svg";
 import lastPageLogo from "../../images/last_page_black_24dp.svg";
+import sortedLogo from "../../images/icon.svg";
 
 const Table = ({ data }) => {
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [tableData, setTableData] = useState(data);
   const [sortField, setSortField] = useState("");
-  const [order, setOrder] = useState("asc");
+  const [order, setOrder] = useState("");
 
   useEffect(() => {
     setTableData(data);
@@ -38,16 +39,17 @@ const Table = ({ data }) => {
   };
 
   const columns = [
-    { label: "Name", accessor: "name", sortable: true },
-    { label: "Height", accessor: "height", sortable: false },
-    { label: "Weight", accessor: "weight", sortable: true },
-    { label: "Starship", accessor: "starship", sortable: true },
-    { label: "Created", accessor: "created", sortable: true },
+    { label: "Name", accessor: "name" },
+    { label: "Height", accessor: "height" },
+    { label: "Weight", accessor: "weight" },
+    { label: "Starship", accessor: "starship" },
+    { label: "Created", accessor: "created" },
   ];
 
   const handleSortingChange = (accessor) => {
     const sortOrder =
       accessor === sortField && order === "asc" ? "desc" : "asc";
+    console.log(sortOrder);
     setSortField(accessor);
     setOrder(sortOrder);
     handleSorting(accessor, sortOrder);
@@ -84,6 +86,19 @@ const Table = ({ data }) => {
                   onClick={() => handleSortingChange(accessor)}
                 >
                   {label}
+                  {sortField === accessor && (
+                    <img
+                      src={sortedLogo}
+                      alt="Logo for sorting"
+                      className={`${classes.sortLogo} ${
+                        order === "asc"
+                          ? classes.sortAsc
+                          : order === "desc"
+                          ? classes.sortDesc
+                          : ""
+                      }`}
+                    />
+                  )}
                 </th>
               );
             })}

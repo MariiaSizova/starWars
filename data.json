@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Luke Skywalker",
+      "height": 172,
+      "weight": 77,
+      "starship": "X-wing, Imperial shuttle",
+      "created": "09.12.2014 15:50"
+    },
+    {
+      "id": 2,
+      "name": "Obi-Wan Kenobi",
+      "height": 182,
+      "weight": 81,
+      "starship": "Jedi starfighter, Trade Federation cruiser",
+      "created": "10.12.2014 17:20"
+    },
+    {
+      "id": 3,
+      "name": "Yoda",
+      "height": 66,
+      "weight": 17,
+      "starship": "",
+      "created": "10.12.2014 18:16"
+    },
+    {
+      "id": 4,
+      "name": "Padme Amidala",
+      "height": 165,
+      "weight": 45,
+      "starship": "H-type Nubian yacht",
+      "created": "10.12.2014 18:49"
+    },
+    {
+      "id": 5,
+      "name": "Leia Organa",
+      "height": 155,
+      "weight": 51,
+      "starship": "Y-wing, X-wing, Imperial shuttle",
+      "created": "15.12.2014 14:26"
+    },
+    {
+      "id": 6,
+      "name": "Owen Lars",
+      "height": 178,
+      "weight": 120,
+      "starship": "",
+      "created": "10.12.2014 15:52"
+    },
+    {
+      "id": 7,
+      "name": "Beru Whitesun lars",
+      "height": 165,
+      "weight": 75,
+      "starship": "",
+      "created": "10.12.2014 15:53"
+    },
+    {
+      "id": 8,
+      "name": "R5-D4",
+      "height": 97,
+      "weight": 32,
+      "starship": "",
+      "created": "10.12.2014 15:57"
+    },
+    {
+      "id": 9,
+      "name": "Biggs Darklighter",
+      "height": 183,
+      "weight": 84,
+      "starship": "X-wing",
+      "created": "10.12.2014 15:59"
+    },
+    {
+      "id": 10,
+      "name": "Obi-Wan Kenobi",
+      "height": 182,
+      "weight": 77,
+      "starship": "Jedi starfighter, Trade Federation cruiser, Naboo star skiff, Jedi Interceptor, Belbullab-22 starfighter",
+      "created": "10.12.2014 16:16"
+    },
+    {
+      "id": 11,
+      "name": "Anakin Skywalker",
+      "height": 188,
+      "weight": 84,
+      "starship": "Naboo fighter, Trade Federation cruiser, Jedi Interceptor",
+      "created": "15.12.2014 16:20"
+    },
+    {
+      "id": 12,
+      "name": "Wilhuff Tarkin",
+      "height": 180,
+      "weight": "",
+      "starship": "",
+      "created": "10.12.2014 16:26"
+    },
+    {
+      "id": 13,
+      "name": "Chewbacca",
+      "height": 228,
+      "weight": 112,
+      "starship": "Millennium Falcon, Imperial shuttle",
+      "created": "10.12.2014 16:42"
+    },
+    {
+      "id": 14,
+      "name": "Han Solo",
+      "height": 180,
+      "weight": 80,
+      "starship": "Millennium Falcon, Imperial shuttle",
+      "created": "10.12.2014 16:49"
+    }
+  ]
+}

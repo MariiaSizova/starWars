@@ -38,6 +38,10 @@
   color: var(--bg-dark-color);
 }
 
+.activeLi {
+  background-color: var(--higlight-color);
+}
+
 .line {
   border: 1px solid #ebe7e740;
   margin: 0 24px;

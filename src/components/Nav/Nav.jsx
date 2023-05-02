@@ -13,6 +13,7 @@ const Nav = () => {
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
+
   return (
     <div className={classes.navBar}>
       <nav className={classes.nav}>

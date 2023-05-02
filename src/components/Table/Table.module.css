@@ -8,14 +8,15 @@ table {
 }
 
 .columnFix {
-  width: 211px;
-  height: 56px;
-  padding-left: 18px;
+  width: 13rem;
+  height: 3.5rem;
+  padding-left: 1rem;
+  position: relative;
 }
 
 .columnSml {
-  width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 th,
@@ -28,7 +29,7 @@ td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 211px;
+  max-width: 13rem;
 }
 
 th {
@@ -48,8 +49,8 @@ tr:hover {
 
 .squareBtn {
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background-color: transparent;
   border: 2px solid #8d8e90;
   border-radius: 2px;
@@ -82,6 +83,25 @@ tr:hover {
   color: var(--bg-dark-color);
   font-family: inherit;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 10px 0 0 10px;
+}
+
+.sortLogo {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 1rem;
+  display: none;
+}
+
+.sortAsc {
+  display: flex;
+}
+
+.sortDesc {
+  transform: rotate(-180deg);
+  display: flex;
 }
